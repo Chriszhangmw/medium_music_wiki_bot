@@ -1,0 +1,64 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- goodbye
+- greet
+- query_knowledge_base
+- play_song
+- play_album
+entities:
+- object_type
+- mention
+- attribute
+- object-type
+- song
+- singer
+slots:
+  attribute:
+    type: unfeaturized
+  knowledge_base_last_object:
+    type: unfeaturized
+  knowledge_base_last_object_type:
+    type: unfeaturized
+  knowledge_base_listed_objects:
+    type: unfeaturized
+  knowledge_base_objects:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  object_type:
+    type: unfeaturized
+  singer:
+    type: unfeaturized
+  song:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: 你好，请说出需要提供天气预测服务的地点和时间
+  utter_working_on_it:
+  - text: 正在查询中，请稍后 ...
+  utter_goodbye:
+  - text: 再见！
+  utter_ask_address:
+  - text: 哪里呢？
+  utter_ask_date-time:
+  - text: 什么时候？
+  utter_report_weather:
+  - text: '{matches}'
+  utter_default:
+  - text: 系统不明白您说的话
+  utter_ask_rephrase:
+  - text: 抱歉系统没能明白您的话，请您重新表述一次
+actions:
+- action_response_query
+- action_play_song
+- action_play_album
+- utter_ask_address
+- utter_ask_date-time
+- utter_goodbye
+- utter_greet
+- utter_report_weather
+- utter_working_on_it
+- utter_default
+- utter_ask_rephrase
