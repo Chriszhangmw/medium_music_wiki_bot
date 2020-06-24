@@ -3,8 +3,10 @@
 *.db-shm
 *.db-wal
 *.log
-*.json
+intent_errors.json
+models/*.tar.gz
 bin_data/total_word_feature_extractor.dat
+*.tar.gz
 
 # for IDE
 .idea
