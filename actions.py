@@ -8,6 +8,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 
+from neo4j_knowledge_base import Neo4jKnowledgeBase
+
 
 class EnToZh:
     def __init__(self, data_file):
@@ -23,7 +25,10 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
         return "action_response_query"
 
     def __init__(self):
-        knowledge_base = InMemoryKnowledgeBase("data.json")
+        # knowledge_base = InMemoryKnowledgeBase("data.json")
+        knowledge_base = Neo4jKnowledgeBase(
+            "bolt://localhost:7687", "neo4j", "43215678"
+        )
         super().__init__(knowledge_base)
 
         self.en_to_zh = EnToZh("en_to_zh.json")
