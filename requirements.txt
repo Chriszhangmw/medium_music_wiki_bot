@@ -1,2 +1,4 @@
 rasa
+rasa_sdk
 jieba
+neo4j

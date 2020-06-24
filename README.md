@@ -1,6 +1,4 @@
-# 一个基于 Rasa 的天气查询机器人[后端部分]
-
-本项目是基于 Rasa 的天气查询机器人项目的后端部分，另一个部分是前端部分位于 [basic_weather_bot_client](https://github.com/howl-anderson/basic_weather_bot_client)
+# 一个基于 Rasa 的音乐百科应用[Demo]
 
 ## 环境要求 ##
 Mac OS X or Linux
@@ -33,10 +31,8 @@ rasa train
 
 ### Step 1: 启动 action server
 ```bash
-SENIVERSE_KEY=xxxx rasa run actions
+rasa run actions
 ```
-
-`xxxx` 部分应该替换成从 [心知天气](https://www.seniverse.com/) 申请获得的 API key 。用户可以免费注册，注册后可以在后台找到 `我的API密钥`。
 
 ### Step 2: 启动rasa server ###
 
@@ -44,8 +40,8 @@ SENIVERSE_KEY=xxxx rasa run actions
 make run_model
 ```
 
-### [可选] 启动 rasa x
-为了能够在不使用（或者没有）客户端的情况下以及测试模型的情况，我们可以使用 rasa x
+### 启动 rasa x
+我们可以使用 rasa x 作为客户端
 
 ```bash
 rasa x --enable-api --auth-token 12345678

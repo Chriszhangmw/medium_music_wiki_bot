@@ -1,14 +1,12 @@
-from typing import Any, Text, Dict, List
 import json
+from collections import defaultdict
+from typing import Any, Dict, List, Text
 
-
-from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
-from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
-from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk import Action
-from rasa_sdk import Tracker
-from rasa_sdk import utils
+from rasa_sdk import Action, Tracker, utils
 from rasa_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
+from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 
 
 class EnToZh:
